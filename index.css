@@ -1,0 +1,135 @@
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ol,
+ul,
+li,
+a {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.4em;
+    background: #f5f5f5;
+    color: #4d4d4d;
+    -webkit-font-smoothing: antialiased;
+}
+
+.header {
+    margin: 30px;
+    text-align: center;
+}
+
+.words-containers {
+    width: 400px;
+    background-color: #111;
+    margin: 0 auto 10px auto;
+    border-radius: 9px;
+    color: #eee;
+    padding: 5px;
+}
+
+.word-contents {
+    display: flex;
+    list-style-type: none;
+}
+
+.word {
+    width: 40px;
+    background-color: #333;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.keyboard {
+    width: 400px;
+    height: 125px;
+    background-color: #111;
+    margin: 50px auto;
+    border-radius: 9px;
+    padding: 30px;
+    color: #eee;
+}
+
+.first-set-of-keys, .second-set-of-keys {
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-set-of-keys {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.key:hover {
+    box-shadow: 0 0 10px #14B524;
+    z-index: 1000;
+    transition: box-shadow 0.7s ease;
+}
+
+.buttons-container{
+    width: 400px;
+    background-color: #111;
+    margin: 0 auto;
+    border-radius: 9px;
+    padding: 30px;
+}
+
+.keyboard, .buttons-container{
+    margin-bottom: 15px;
+}
+
+.buttons-contents{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    background-color: gray;
+    border-color: #333;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.button:hover{
+    box-shadow: 0 0 10px #14B524;
+    z-index: 1000;
+    transition: box-shadow 0.7s ease;
+}
+
+.play-game{
+    background-color: green;
+}
+
+.solve-the-riddle{
+    background-color: darkred;
+}
+
+.footer {
+    margin: 65px auto 0;
+    text-align: center;
+}
