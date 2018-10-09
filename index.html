@@ -2,9 +2,222 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Guess the word mvc</title>
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ol,
+        ul,
+        li,
+        a {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            line-height: 1.4em;
+            background: #f5f5f5;
+            color: #4d4d4d;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header {
+            margin: 30px;
+            text-align: center;
+        }
+
+        .words-containers {
+            width: 400px;
+            background-color: #111;
+            margin: 0 auto 10px auto;
+            border-radius: 9px;
+            color: #eee;
+            padding: 5px;
+        }
+
+        .word-contents {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .word {
+            width: 40px;
+            background-color: #333;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 2px;
+            margin-left: 5px;
+            margin-bottom: 2px;
+        }
+
+        .keyboard {
+            width: 400px;
+            height: 125px;
+            background-color: #111;
+            margin: 50px auto;
+            border-radius: 9px;
+            padding: 30px;
+            color: #eee;
+        }
+
+        .first-set-of-keys, .second-set-of-keys {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .third-set-of-keys {
+            display: flex;
+            justify-content: center;
+        }
+
+        .key {
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 2px;
+            margin-left: 5px;
+            margin-bottom: 2px;
+            cursor: pointer;
+        }
+
+        .key:hover {
+            box-shadow: 0 0 10px #14B524;
+            z-index: 1000;
+            transition: box-shadow 0.7s ease;
+        }
+
+        .buttons-container{
+            width: 400px;
+            background-color: #111;
+            margin: 0 auto;
+            border-radius: 9px;
+            padding: 30px;
+        }
+
+        .keyboard, .buttons-container{
+            margin-bottom: 15px;
+        }
+
+        .buttons-contents{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button{
+            background-color: gray;
+            border-color: #333;
+            color: white;
+            padding: 15px 32px;
+            border-radius: 9px;
+            cursor: pointer;
+        }
+
+        .button:hover{
+            box-shadow: 0 0 10px #14B524;
+            z-index: 1000;
+            transition: box-shadow 0.7s ease;
+        }
+
+        .play-game{
+            background-color: green;
+        }
+
+        .solve-the-riddle{
+            background-color: darkred;
+        }
+
+        .footer {
+            margin: 65px auto 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-
+<header class="header">
+    <h1>Guess the word !</h1>
+</header>
+<section class="main">
+    <div class="words-containers">
+        <ul class="word-contents">
+            <li class="word">H</li>
+            <li class="word">I</li>
+            <li class="word">D</li>
+            <li class="word">D</li>
+            <li class="word">E</li>
+            <li class="word">N</li>
+            <li class="word">_</li>
+            <li class="word">W</li>
+            <li class="word">O</li>
+            <li class="word">R</li>
+            <li class="word">D</li>
+        </ul>
+    </div>
+    <div class="words-containers">
+        <ul class="word-contents">
+            <li class="word">G</li>
+            <li class="word">A</li>
+            <li class="word">M</li>
+            <li class="word">E</li>
+            <li class="word">_</li>
+            <li class="word">O</li>
+            <li class="word">V</li>
+            <li class="word">E</li>
+            <li class="word">R</li>
+        </ul>
+    </div>
+    <div class="keyboard">
+        <div class="first-set-of-keys">
+            <div class="key">A</div>
+            <div class="key">B</div>
+            <div class="key">C</div>
+            <div class="key">D</div>
+            <div class="key">E</div>
+            <div class="key">F</div>
+            <div class="key">G</div>
+            <div class="key">H</div>
+            <div class="key">I</div>
+        </div>
+        <div class="second-set-of-keys">
+            <div class="key">J</div>
+            <div class="key">K</div>
+            <div class="key">L</div>
+            <div class="key">M</div>
+            <div class="key">N</div>
+            <div class="key">O</div>
+            <div class="key">P</div>
+            <div class="key">Q</div>
+            <div class="key">R</div>
+        </div>
+        <div class="third-set-of-keys">
+            <div class="key">S</div>
+            <div class="key">T</div>
+            <div class="key">U</div>
+            <div class="key">V</div>
+            <div class="key">W</div>
+            <div class="key">X</div>
+            <div class="key">Y</div>
+            <div class="key">Z</div>
+        </div>
+    </div>
+    <div class="buttons-container">
+        <div class="buttons-contents">
+            <button class="button play-game">Play Game</button>
+            <button class="button solve-the-riddle">Solve the riddle</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>"Created by" <a href="#">Gabriel Mijares Lobato</a></p>
+        <p>"Inspired by" <a href="#">Hangman</a></p>
+    </footer>
+</section>
 </body>
 </html>
